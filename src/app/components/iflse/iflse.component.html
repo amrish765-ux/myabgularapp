@@ -1,0 +1,33 @@
+<p>iflse works!</p>
+<div class="row p-3">
+    <div class="col-3">
+        @if(div1Visible==true){
+            <div class="p-3 text-center bg-primary">
+                <h4>div-1</h4>
+            </div>
+        }
+    </div>
+    <div class="col-3">
+        @if(isWaringdiv){
+            <div class="p-3 text-center bg-success">
+                <h4>div-2</h4>
+            </div>
+        }@else{
+            <div class="p-3 text-center bg-warning">
+                <h4>div-2</h4>
+            </div>
+        }
+        
+    </div>
+</div>
+<div class="row p-3">
+    <div class="col-3">
+       <button class="btn btn-danger"(click)="showdiv1()">show</button>
+       <button class="btn btn-primary"(click)="hidediv1()">hide</button>
+       <button class="btn btn-secondary"(click)="toggleshow()">toggle</button>
+    </div>
+
+    <div>
+        {{firstName|uppercase}}
+    </div>
+</div>

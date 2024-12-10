@@ -1,0 +1,13 @@
+<div class="products-grid">
+    <!-- Loop through the products and display each product -->
+    <app-product
+      *ngFor="let product of products"
+      [product]="product"
+    ></app-product>
+  </div>
+  
+  <!-- Go to Cart link outside the grid -->
+  <div class="cart-link-container">
+    <a routerLink="/cart" class="cart-link">Go to Cart</a>
+  </div>
+  

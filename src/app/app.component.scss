@@ -1,0 +1,10 @@
+/* Show the dropdown when hovering */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Optional: Add some space between the dropdown items */
+  .dropdown-menu .dropdown-item {
+    margin-top: 5px;
+  }
+  

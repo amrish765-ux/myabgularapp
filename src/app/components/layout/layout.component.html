@@ -1,0 +1,74 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="javascript:void(0)">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mynavbar">
+        <!-- Internal links with dropdown on hover -->
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item dropdown" style="margin-top:-12px;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              template
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" routerLink="emp-list">Employee List 2</a></li>
+              <li><a class="dropdown-item" routerLink="ngcontainer">ngcontainer</a></li>
+              <li><a class="dropdown-item" routerLink="view">viewcomponent</a></li>
+              <li><a class="dropdown-item" routerLink="emp-list3">Employee List 3</a></li>
+            </ul>
+          </li>
+          
+          <!-- Other nav items -->
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="databinding">Link</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="struct">Link</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="reactive-form">Reactive Form</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="ngtemplate">NG Template</a>
+          </li>
+          <li class="nav-item" style="margin-top:-12px;">
+            <a class="nav-link" routerLink="http-client">HTTP Client</a>
+          </li>
+        </ul>
+  
+       
+  
+        <!-- Search form -->
+        <form class="d-flex" #name="ngForm" (ngSubmit)="onSearch(name.value)">
+            <!-- Search Input Field with Label -->
+            <div class="form-group">
+              <label for="searchInput">Search</label>
+              <input
+                id="searchInput"
+                class="form-control me-2"
+                type="text"
+                placeholder="Search"
+                name="search"
+                [(ngModel)]="searchQuery"
+                autocomplete="off" />
+            </div>
+          
+            <!-- Search Button (submit form on click) -->
+            <button class="btn btn-primary" type="submit">Search</button>
+          
+            <!-- Logout Button (no form submission) -->
+            <button class="btn btn-danger" type="button" (click)="logoff()">Logout</button>
+          </form>
+          
+      </div>
+    </div>
+  </nav>
+  
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+ 
+  
+  

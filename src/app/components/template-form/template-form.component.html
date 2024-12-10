@@ -1,0 +1,61 @@
+<p>template-form with ngmodel more in html and less in ts file validaiton</p>
+<p>create object where we have all these states</p>
+
+
+<div class="container">
+    <form action="action_page.php"  #form="ngForm">
+
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" #fName="ngModel" [(ngModel)]="studentObj.firstName" name="firstName"
+            placeholder="Your name.." required minlength="3">
+        <div class="text-danger">
+            @if((fName.touched || fName.dirty) && fName.errors?.['required']){
+            <span>This is required</span>
+            }
+            @else if((fName.touched|| fName.dirty) && fName.errors?.['minlength']){
+            <span>Min 3 char required</span>
+            }
+
+        </div>
+
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" [(ngModel)]="studentObj.lastName" name="lastName" placeholder="Your last name..">
+
+        <label for="userName">userName</label>
+        <input type="text" id="userName" [(ngModel)]="studentObj.userName" name="userName"
+            placeholder="Your username name..">
+
+        <label for="city">city</label>
+        <select id="country" name="city" [(ngModel)]="studentObj.city">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+
+        <select id="state" name="state" [(ngModel)]="studentObj.state">
+            <option value="" selected disabled>choose....</option>
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+        </select>
+        <label for="zipCode">zipCode</label>
+        <input type="text" id="zipCode" [(ngModel)]="studentObj.zipCode" name="zipCode"
+            placeholder="Your zipCode name..">
+
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <div class="col-12">
+            <div class="form-check">
+                <input type="checkbox" name="isAcceptTerm" [(ngModel)]="studentObj.isAcceptTerm" id="">
+                <label class="
+            form-check-label" for="invalidCheck">Agree to term and conditions</label>
+            </div>
+        </div>
+        <button class="btn btn-secondary"type="button" (click)="clickResetForm()">resetForm</button>
+        <button class="btn btn-success" [disabled]="form.invalid"type="button"(click)="onSubmit()">submit</button>
+
+    </form>
+</div>

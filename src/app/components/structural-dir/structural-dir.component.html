@@ -1,0 +1,112 @@
+<p>structural-dir works!</p>
+<div class="row pt-3">
+    <div class="col-3">
+        <div *ngIf="isDiv1Visible" class="bg-danger p-3 text-center">
+            <h4>div1</h4>
+        </div>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-3">
+        <div class="mat-background-warn p-3 text-center">
+            <button class="btn btn-primary" (click)="showDiv1()">show</button>
+            <button class="btn btn-danger" (click)="hideDiv1()">hide</button>
+            <button class="btn btn-danger" (click)="addRedColor()">addRed</button>
+            <button class="btn btn-danger" (click)="addBlueColor()">addblue</button>
+
+        </div>
+        <div *ngIf="num1==num2" class="bg-danger">
+            <h2>hello</h2>
+        </div>
+        <button (click)="istoggleDiv2()">toggle</button>
+    </div>
+</div>
+<div class="col-3">
+    <div style="display: flex;align-items: center;">
+        <input type="text" [(ngModel)]="num1" placeholder="num1">
+        <input type="text" [(ngModel)]="num2" placeholder="num2">
+    </div>
+</div>
+
+
+<div class="col-3">
+    <div class="col-3">
+        <div *ngIf="selectedState=='up'" class="p-3 text-center" [ngClass]="isDiv2Active?'bg-success':'bg-warning'">
+            <h4>div4</h4>
+        </div>
+    </div>
+    <div style="display: flex;align-items: center;">
+        <input [(ngModel)]="isActive" type="checkbox" class="width-50">
+        <select [(ngModel)]="selectedState" id="state">
+            <option value="">select state</option>
+            <option value="up">up</option>
+            <option value="mp">mp</option>
+            <option value="gk">gk</option>
+        </select>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityArray">{{city}}</li>
+
+        </ul>
+    </div>
+    <div class="col-3">
+        <select name="stateName" id="statas">
+            <option *ngFor="let city of cityArray" value="">{{city}}</option>
+        </select>
+    </div>
+    <div class="col-3">
+        <select name="" id="">
+            <option *ngFor="let stud of studentList" [value]="stud.studentid">{{stud.name}}</option>
+        </select>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-5">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Status</th>
+                    <th>gender</th>
+                    <th>totalmarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentList; let srNo = index">
+                    <td>{{ srNo + 1 }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.city }}</td>
+                    <td [ngStyle]="{'background-color':student.isActive?'yellow':'red'}">
+                        <!-- <span *ngIf="student.isActive">Active</span>
+                        <span *ngIf="!student.isActive">De-Active</span> -->
+                        <span >{{student.isActive?"active":"deactive"}}</span>
+                    </td>
+                    <td>{{student.gender}}</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar"[ngStyle]="{'width':student.totalmarks+'%'}">
+                                {{ student.totalmarks+'%'}}
+                            </div>
+                        </div>
+                        
+                        </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-5">
+            <div [ngStyle]="customSolor">
+                <h1>divtest</h1>
+            </div>
+        </div>
+    </div>
+</div>

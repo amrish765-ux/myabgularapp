@@ -1,0 +1,44 @@
+<p>http-client works!</p>
+
+<app-alert [alertType]="'success'" [message]="'Welcome to httpclient page'"></app-alert>
+<br>
+<app-alert [alertType]="'Error'" [message]="'some error occoured'"></app-alert>
+
+
+<app-my-button (onbtnclick)="getdata($event)" [btnClass]="'btn btn-success'" [btnText]="'saveRecord'">Save
+    record</app-my-button>
+
+
+
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="getAllUser()">Get Users</button>
+    </div>
+    <div class="col-3">
+        <select class="form-select">
+            @for(item of userList;track $index){
+            <option value="track">{{item.name}}</option>
+            }
+        </select>
+    </div>
+</div>
+
+<h2>Create a New Post</h2>
+<!-- <button (click)="createNewPost()">Create Post</button> -->
+<app-my-button (onbtnclick)="createNewPost()" [btnClass]="'btn btn-success'" [btnText]="'saveRecord'">Save
+    record</app-my-button>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam maxime quis doloremque molestias delectus tenetur ipsum
+    commodi, debitis veniam rerum voluptatum odio excepturi quia perspiciatis nihil omnis iure? Aliquid dicta eius sequi
+    quidem aspernatur? Nemo aliquid ad, eaque iusto consectetur blanditiis ratione ipsum, architecto reiciendis quos
+    adipisci molestiae doloremque commodi voluptatum nam error repellat id porro dolor quis alias velit! Laborum nemo
+    ducimus dolor maiores a dolorum odio aliquid in enim quis, possimus explicabo id itaque cupiditate necessitatibus
+    soluta incidunt unde dolores at nisi distinctio. Repudiandae, provident. Illum eum nisi, quidem optio dolorum
+    voluptatem doloremque sint velit vitae, tempore laborum!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia temporibus hic incidunt aliquid dolore sunt voluptate
+    soluta neque nam! Adipisci facere veritatis sequi. Illum mollitia nisi ab eveniet? Similique officiis, beatae
+    deserunt unde aliquam placeat incidunt dignissimos fugiat nesciunt, iure est quibusdam repellat excepturi quos
+    adipisci dolores. Cumque similique assumenda delectus, fuga, corporis accusantium hic consequuntur sapiente amet
+    deserunt aperiam iure labore asperiores? Accusamus incidunt non pariatur rerum laudantium suscipit consequatur rem
+    deserunt aperiam tenetur natus obcaecati aliquam omnis soluta reiciendis optio quod officia earum ullam, sequi
+    facere! Doloremque nostrum laborum quibusdam corporis distinctio unde voluptatem saepe reiciendis magnam atque?</p>

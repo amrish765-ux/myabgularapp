@@ -1,0 +1,59 @@
+<p>databinding works!</p>
+<div class="row">
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4 bg-success">
+                {{courseName}}
+                <div>{{inputType}}</div>
+                <input type="text" [value]="courseName" placeholder="Enter text"/>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        Property Binding
+        <div [class]="myClassName">
+            hello
+        </div>
+
+    </div>
+    <div class="col-4">
+        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+<button class="btn btn-success"(click)="showAlert('alert clicked')">alert click</button>
+<button class="btn btn-success"(click)="showAlert('hey how are you Mr.')">alert click</button>
+<button (click)="chnageCourseName()">changeCourse</button>
+
+
+    </div>
+    <div class="col-4">
+        <input type="text"[(ngModel)]="courseName">{{courseName}}
+
+        <select [(ngModel)]="stateName"name="selectcourse" id="selelctcourse">
+            <option value="select">select</option>
+            <option value="up">up</option>
+            <option value="goa">goa</option>
+            <option value="mp">mp</option>
+        </select>
+    </div>
+    <div class="col-4">
+        
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-4">
+
+    </div>
+    <div class="col-4">
+        
+    </div>
+    <div class="col-6">
+        <h2>{{firstName()}}</h2>
+        
+    </div>
+</div>
