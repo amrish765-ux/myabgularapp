@@ -18,6 +18,7 @@ import { ViewChildComponent } from './components/view-child/view-child.component
 import { LoginComponent } from './components/login/login.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { authGuard } from './services/auth.guard';
+import { MaterailiconComponent } from './components/materailicon/materailicon.component';
 
 export const routes: Routes = [
     { path: '', redirectTo:'login', pathMatch:'full'},
@@ -40,6 +41,7 @@ export const routes: Routes = [
         { path: 'ngtemplate', component: NgTemplateComponent },
         { path: 'ngcontainer', component: NgcontainerComponent },
         { path: 'view', component: ViewChildComponent },
+        { path: 'materail', component: MaterailiconComponent },
     ] },
 
 ];

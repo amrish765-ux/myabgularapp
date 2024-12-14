@@ -3,7 +3,7 @@ import { Component, TemplateRef, ViewChild, ViewContainerRef } from '@angular/co
 
 @Component({
   selector: 'app-ng-template',
-  imports: [CommonModule,MatFormFieldModule, MatInputModule, MatDatepickerModule],
+  imports: [CommonModule],
   templateUrl: './ng-template.component.html',
   styleUrl: './ng-template.component.scss'
 })
@@ -18,6 +18,6 @@ export class NgTemplateComponent {
   @ViewChild('dynamicContainer',{read:ViewContainerRef}) dynamicContainer:ViewContainerRef | undefined 
   loadTemplate(){
     if(this.dynamicTemplate)
-      this.dynamicContainer?.createEmbeddedView(this.dynamicTemplate)
+    this.dynamicContainer?.createEmbeddedView(this.dynamicTemplate)
   }
 }
