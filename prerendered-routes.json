@@ -1,21 +1,21 @@
 {
   "routes": {
-    "/https://github.com/amrish765-ux/myabgularapp": {},
-    "/https://github.com/amrish765-ux/myabgularapp/add-employee": {},
-    "/https://github.com/amrish765-ux/myabgularapp/databinding": {},
-    "/https://github.com/amrish765-ux/myabgularapp/emp-list": {},
-    "/https://github.com/amrish765-ux/myabgularapp/for": {},
-    "/https://github.com/amrish765-ux/myabgularapp/http-client": {},
-    "/https://github.com/amrish765-ux/myabgularapp/if-else": {},
-    "/https://github.com/amrish765-ux/myabgularapp/login": {},
-    "/https://github.com/amrish765-ux/myabgularapp/materail": {},
-    "/https://github.com/amrish765-ux/myabgularapp/ngcontainer": {},
-    "/https://github.com/amrish765-ux/myabgularapp/ngtemplate": {},
-    "/https://github.com/amrish765-ux/myabgularapp/pipe": {},
-    "/https://github.com/amrish765-ux/myabgularapp/reactive-form": {},
-    "/https://github.com/amrish765-ux/myabgularapp/struct": {},
-    "/https://github.com/amrish765-ux/myabgularapp/switch-case": {},
-    "/https://github.com/amrish765-ux/myabgularapp/template-form": {},
-    "/https://github.com/amrish765-ux/myabgularapp/view": {}
+    "/myabgularapp": {},
+    "/myabgularapp/add-employee": {},
+    "/myabgularapp/databinding": {},
+    "/myabgularapp/emp-list": {},
+    "/myabgularapp/for": {},
+    "/myabgularapp/http-client": {},
+    "/myabgularapp/if-else": {},
+    "/myabgularapp/login": {},
+    "/myabgularapp/materail": {},
+    "/myabgularapp/ngcontainer": {},
+    "/myabgularapp/ngtemplate": {},
+    "/myabgularapp/pipe": {},
+    "/myabgularapp/reactive-form": {},
+    "/myabgularapp/struct": {},
+    "/myabgularapp/switch-case": {},
+    "/myabgularapp/template-form": {},
+    "/myabgularapp/view": {}
   }
 }

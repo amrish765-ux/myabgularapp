@@ -1,6 +1,6 @@
 
 export default {
-  basePath: 'https://github.com/amrish765-ux/myabgularapp',
+  basePath: '/myabgularapp/',
   entryPoints: {
     '': () => import('./main.server.mjs')
   },
