@@ -1,0 +1,21 @@
+{
+  "routes": {
+    "/": {},
+    "/add-employee": {},
+    "/databinding": {},
+    "/emp-list": {},
+    "/for": {},
+    "/http-client": {},
+    "/if-else": {},
+    "/login": {},
+    "/materail": {},
+    "/ngcontainer": {},
+    "/ngtemplate": {},
+    "/pipe": {},
+    "/reactive-form": {},
+    "/struct": {},
+    "/switch-case": {},
+    "/template-form": {},
+    "/view": {}
+  }
+}
