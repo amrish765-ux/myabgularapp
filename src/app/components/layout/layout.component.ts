@@ -3,10 +3,13 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocomplete } from '@angular/material/autocomplete';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-layout',
-  imports: [RouterOutlet,RouterLink,FormsModule,ReactiveFormsModule,MatAutocomplete],
+  imports: [RouterOutlet,RouterLink,FormsModule,ReactiveFormsModule,
+    MatAutocomplete,
+    MatMenuModule],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
